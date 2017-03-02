@@ -17,12 +17,12 @@
 //==============================================================================
 /**
 */
-class StartingPointAudioProcessor  : public AudioProcessor
+class StereoPannerAudioProcessor  : public AudioProcessor
 {
 public:
     //==============================================================================
-    StartingPointAudioProcessor();
-    ~StartingPointAudioProcessor();
+    StereoPannerAudioProcessor();
+    ~StereoPannerAudioProcessor();
 
     //==============================================================================
     void prepareToPlay (double sampleRate, int samplesPerBlock) override;
@@ -58,7 +58,7 @@ public:
 
 private:
     //==============================================================================
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (StartingPointAudioProcessor)
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (StereoPannerAudioProcessor)
 };
 
 

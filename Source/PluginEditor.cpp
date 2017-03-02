@@ -7,7 +7,7 @@
   the "//[xyz]" and "//[/xyz]" sections will be retained when the file is loaded
   and re-saved.
 
-  Created with Projucer version: 4.3.0
+  Created with Projucer version: 4.3.1
 
   ------------------------------------------------------------------------------
 
@@ -27,7 +27,7 @@
 //[/MiscUserDefs]
 
 //==============================================================================
-StartingPointAudioProcessorEditor::StartingPointAudioProcessorEditor (StartingPointAudioProcessor& p)
+StereoPannerAudioProcessorEditor::StereoPannerAudioProcessorEditor (StereoPannerAudioProcessor& p)
     : AudioProcessorEditor(p), processor(p)
 {
     //[Constructor_pre] You can add your own custom stuff here..
@@ -45,7 +45,7 @@ StartingPointAudioProcessorEditor::StartingPointAudioProcessorEditor (StartingPo
     //[/Constructor]
 }
 
-StartingPointAudioProcessorEditor::~StartingPointAudioProcessorEditor()
+StereoPannerAudioProcessorEditor::~StereoPannerAudioProcessorEditor()
 {
     //[Destructor_pre]. You can add your own custom destruction code here..
     //[/Destructor_pre]
@@ -57,7 +57,7 @@ StartingPointAudioProcessorEditor::~StartingPointAudioProcessorEditor()
 }
 
 //==============================================================================
-void StartingPointAudioProcessorEditor::paint (Graphics& g)
+void StereoPannerAudioProcessorEditor::paint (Graphics& g)
 {
     //[UserPrePaint] Add your own custom painting code here..
     //[/UserPrePaint]
@@ -68,7 +68,7 @@ void StartingPointAudioProcessorEditor::paint (Graphics& g)
     //[/UserPaint]
 }
 
-void StartingPointAudioProcessorEditor::resized()
+void StereoPannerAudioProcessorEditor::resized()
 {
     //[UserPreResize] Add your own custom resize code here..
     //[/UserPreResize]
@@ -79,12 +79,12 @@ void StartingPointAudioProcessorEditor::resized()
 
 
 
-//[MiscUserCode] You can add your own definitions of your custom methods or any other code here...
-void StartingPointAudioProcessorEditor::timerCallback()
+//[MiscUserCode] You can add your own definitions of your custom methods or any
+//other code here...
+void StereoPannerAudioProcessorEditor::timerCallback()
 {
     //exchange any data you want between UI elements and the Plugin "ourProcessor"
 }
-
 //[/MiscUserCode]
 
 
@@ -97,7 +97,7 @@ void StartingPointAudioProcessorEditor::timerCallback()
 
 BEGIN_JUCER_METADATA
 
-<JUCER_COMPONENT documentType="Component" className="StartingPointAudioProcessorEditor"
+<JUCER_COMPONENT documentType="Component" className="StereoPannerAudioProcessorEditor"
                  componentName="" parentClasses="public AudioProcessorEditor, public Timer"
                  constructorParams="StereoPannerAudioProcessor&amp; p" variableInitialisers="AudioProcessorEditor(p), processor(p)"
                  snapPixels="8" snapActive="1" snapShown="1" overlayOpacity="0.330"

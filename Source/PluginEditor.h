@@ -7,7 +7,7 @@
   the "//[xyz]" and "//[/xyz]" sections will be retained when the file is loaded
   and re-saved.
 
-  Created with Projucer version: 4.3.0
+  Created with Projucer version: 4.3.1
 
   ------------------------------------------------------------------------------
 
@@ -17,11 +17,11 @@
   ==============================================================================
 */
 
-#ifndef __JUCE_HEADER_E381F33C12CAF11D__
-#define __JUCE_HEADER_E381F33C12CAF11D__
+#ifndef __JUCE_HEADER_FC76FA5BA2987F99__
+#define __JUCE_HEADER_FC76FA5BA2987F99__
 
-//[Headers]     -- You can add your own extra header files here --
-#include "../JuceLibraryCode/JuceHeader.h"
+//[Headers] -- You can add your own extra header files here --
+#include "JuceHeader.h"
 #include "PluginProcessor.h"
 //[/Headers]
 
@@ -35,16 +35,16 @@
     Describe your class and how it works here!
                                                                     //[/Comments]
 */
-class StartingPointAudioProcessorEditor  : public AudioProcessorEditor,
-                                           public Timer
+class StereoPannerAudioProcessorEditor  : public AudioProcessorEditor,
+                                          public Timer
 {
 public:
     //==============================================================================
-    StartingPointAudioProcessorEditor (StartingPointAudioProcessor& p);
-    ~StartingPointAudioProcessorEditor();
+    StereoPannerAudioProcessorEditor (StereoPannerAudioProcessor& p);
+    ~StereoPannerAudioProcessorEditor();
 
     //==============================================================================
-    //[UserMethods]     -- You can add your own custom methods in this section.
+    //[UserMethods] -- You can add your own custom methods in this section.
     void timerCallback();
     //[/UserMethods]
 
@@ -54,18 +54,18 @@ public:
 
 
 private:
-    //[UserVariables]   -- You can add your own custom variables in this section.
-    StartingPointAudioProcessor& processor;
+    //[UserVariables] -- You can add your own custom variables in this section.
+    StereoPannerAudioProcessor& processor;
     //[/UserVariables]
 
     //==============================================================================
 
 
     //==============================================================================
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (StartingPointAudioProcessorEditor)
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (StereoPannerAudioProcessorEditor)
 };
 
 //[EndFile] You can add extra defines here...
 //[/EndFile]
 
-#endif   // __JUCE_HEADER_E381F33C12CAF11D__
+#endif   // __JUCE_HEADER_FC76FA5BA2987F99__
