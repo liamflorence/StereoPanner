@@ -20,7 +20,7 @@
 #ifndef __JUCE_HEADER_FC76FA5BA2987F99__
 #define __JUCE_HEADER_FC76FA5BA2987F99__
 
-//[Headers] -- You can add your own extra header files here --
+//[Headers]     -- You can add your own extra header files here --
 #include "JuceHeader.h"
 #include "PluginProcessor.h"
 //[/Headers]
@@ -36,7 +36,8 @@
                                                                     //[/Comments]
 */
 class StereoPannerAudioProcessorEditor  : public AudioProcessorEditor,
-                                          public Timer
+                                          public Timer,
+                                          public SliderListener
 {
 public:
     //==============================================================================
@@ -44,21 +45,23 @@ public:
     ~StereoPannerAudioProcessorEditor();
 
     //==============================================================================
-    //[UserMethods] -- You can add your own custom methods in this section.
+    //[UserMethods]     -- You can add your own custom methods in this section.
     void timerCallback();
     //[/UserMethods]
 
     void paint (Graphics& g) override;
     void resized() override;
+    void sliderValueChanged (Slider* sliderThatWasMoved) override;
 
 
 
 private:
-    //[UserVariables] -- You can add your own custom variables in this section.
+    //[UserVariables]   -- You can add your own custom variables in this section.
     StereoPannerAudioProcessor& processor;
     //[/UserVariables]
 
     //==============================================================================
+    ScopedPointer<Slider> sliderPanPosition;
 
 
     //==============================================================================
